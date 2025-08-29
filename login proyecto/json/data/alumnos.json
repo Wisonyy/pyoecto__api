@@ -1,0 +1,26 @@
+[
+  {
+    "dni": "56235896",
+    "nombre": "wilson paredes",
+    "apellido": "huacarpuma",
+    "edad": "20"
+  },
+  {
+    "dni": "89563254",
+    "nombre": "fredy",
+    "apellido": "onofre",
+    "edad": "23"
+  },
+  {
+    "dni": "78965325",
+    "nombre": "roberto",
+    "apellido": "carlos",
+    "edad": "19"
+  },
+  {
+    "dni": "59632145",
+    "nombre": "luis",
+    "apellido": "perez",
+    "edad": "20"
+  }
+]

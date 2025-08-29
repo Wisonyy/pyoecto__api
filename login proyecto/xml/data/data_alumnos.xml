@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+  <alumno>
+    <dni> </dni>
+    <nombre> </nombre>
+    <apellido></apellido>  
+    <edad> </edad> 
+  </alumno>
+
+   <alumno>
+    <dni> </dni>
+    <nombre> </nombre>
+    <apellido></apellido>  
+    <edad> </edad> 
+  </alumno>
+  <alumno>
+    <dni> </dni>
+    <nombre> </nombre>
+    <apellido></apellido>  
+    <edad> </edad> 
+  </alumno>
+  <alumno>
+    <dni> </dni>
+    <nombre> </nombre>
+    <apellido></apellido>  
+    <edad> </edad> 
+  </alumno>
+</alumnos>

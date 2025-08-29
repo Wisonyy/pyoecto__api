@@ -1,0 +1,64 @@
+/* Fondo general con degradado */
+body {
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor centrado */
+.container {
+  background-color: #ffffffee;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Título */
+.container h2 {
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Input */
+.container input[type="text"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Botón */
+.container button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 16px;
+}
+
+.container button:hover {
+  background-color: #0056b3;
+}
+
+/* Resultado */
+#resultado {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #222;
+}
+

@@ -1,0 +1,20 @@
+[
+    {
+        "dni": "45896325",
+        "nombre": "javier",
+        "apellido": "olvea",
+        "curso": "coo3"
+    },
+     {
+        "dni": "78965325",
+        "nombre": "juan carlos",
+        "apellido": "quirita",
+        "curso": "coo2"
+    },
+     {
+        "dni": "78996542",
+        "nombre": "alfredo",
+        "apellido": "ccari",
+        "curso": "coo1"
+    }
+]

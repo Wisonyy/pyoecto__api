@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="estilos.css">
+
+  <!-- Bootstrap (opcional para estilos más pro) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Sign-In -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <style>
+   
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+
+  <!-- Sección de login -->
+  <div id="login-form">
+    <h2>Iniciar sesión</h2>
+
+    <input type="text" id="usuario" placeholder="Usuario" class="form-control mb-2" />
+    <input type="password" id="clave" placeholder="Contraseña" class="form-control mb-2" />
+    <button class="btn btn-primary w-100" onclick="loginTradicional()">Iniciar sesión</button>
+
+    <div class="divider"><span>O</span></div>
+
+    <!-- Google Sign-In -->
+    <div id="g_id_onload"
+         data-client_id="627571172403-ejib9jgrfdmd0641o4ekit6m4bp3mbmq.apps.googleusercontent.com"
+         data-context="signin"
+         data-callback="handleCredentialResponse"
+         data-auto_prompt="false">
+    </div>
+
+    <div class="g_id_signin"
+         data-type="standard"
+         data-shape="rectangular"
+         data-theme="outline"
+         data-text="sign_in_with"
+         data-size="large">
+    </div>
+  </div>
+
+  <!-- Sección después del login -->
+  <div id="bienvenida" class="bienvenida d-none">
+    <img id="foto" alt="Foto de perfil">
+    <h4 id="nombre"></h4>
+    <p id="correo"></p>
+
+   <div class="button-container">
+    <a href="consulta-dni/index.html" class="btn">Consulta DNI</a>
+    <a href="consulta-ruc/index.html" class="btn">Consulta RUC</a>
+    <a href="xml/index.html" class="btn">Leer XML</a>
+    <a href="json/index.html" class="btn">Leer JSON</a>
+  </div>
+  </div>
+
+</div>
+
+<script>
+  function loginTradicional() {
+    const user = document.getElementById("usuario").value;
+    const pass = document.getElementById("clave").value;
+
+    if (user === "admin" && pass === "1234") {
+      localStorage.setItem("nombre", "Admin");
+      localStorage.setItem("email", "admin@example.com");
+      localStorage.setItem("foto", "https://www.gravatar.com/avatar?d=identicon");
+
+      mostrarBienvenida();
+    } else {
+      alert("Usuario o contraseña incorrectos");
+    }
+  }
+
+  function handleCredentialResponse(response) {
+    const jwt = response.credential;
+    const payload = JSON.parse(atob(jwt.split('.')[1]));
+
+    localStorage.setItem("nombre", payload.name);
+    localStorage.setItem("email", payload.email);
+    localStorage.setItem("foto", payload.picture);
+
+    mostrarBienvenida();
+  }
+
+  function mostrarBienvenida() {
+    const nombre = localStorage.getItem("nombre");
+    const email = localStorage.getItem("email");
+    const foto = localStorage.getItem("foto");
+
+    document.getElementById("nombre").textContent = `¡Bienvenido, ${nombre}!`;
+    document.getElementById("correo").textContent = email;
+    document.getElementById("foto").src = foto;
+
+    document.getElementById("login-form").classList.add("d-none");
+    document.getElementById("bienvenida").classList.remove("d-none");
+  }
+
+  // Si ya está logueado, mostrar directamente
+  window.onload = function () {
+    if (localStorage.getItem("nombre")) {
+      mostrarBienvenida();
+    }
+  };
+</script>
+
+</body>
+</html>

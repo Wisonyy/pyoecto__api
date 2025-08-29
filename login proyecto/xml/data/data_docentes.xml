@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<docentes>
+  <docente>
+  <dni></dni>
+  <nombre></nombre>
+  <apellido></apellido>
+  <curso></curso>
+  </docente>
+  <docente>
+  <dni></dni>
+  <nombre></nombre>
+  <apellido></apellido>
+  <curso></curso>
+  </docente>
+   <docente>
+  <dni></dni>
+  <nombre></nombre>
+  <apellido></apellido>
+  <curso></curso>
+  </docente>
+
+</docentes>

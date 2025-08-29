@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<docentes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<docente>
+		<dni>74128596</dni>
+		<nombre>JAVIER</nombre>
+		<apellido>OLVEA</apellido>
+		<curso>COO3</curso>
+	</docente>
+	<docente>
+		<dni>52126320</dni>
+		<nombre>JUAN CARLOS</nombre>
+		<apellido>QUIRITA</apellido>
+		<curso>COO2</curso>
+	</docente>
+	<docente>
+		<dni>84512463</dni>
+		<nombre>ALFREDO</nombre>
+		<apellido>CCARI</apellido>
+		<curso>COO1</curso>
+	</docente>
+</docentes>
